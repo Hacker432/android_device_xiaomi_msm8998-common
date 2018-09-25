@@ -19,7 +19,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_n_mr1.mk
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-lineage
+    #$(LOCAL_PATH)/overlay-lineage
 
 PRODUCT_ENFORCE_RRO_TARGETS := \
     framework-res
@@ -86,21 +86,15 @@ PRODUCT_PACKAGES += \
     audio.primary.msm8998 \
     audio.r_submix.default \
     audio.usb.default \
-
-PRODUCT_PACKAGES += \
     libaudio-resampler \
     libqcompostprocbundle \
     libqcomvisualizer \
     libqcomvoiceprocessing \
     libvolumelistener \
-
-PRODUCT_PACKAGES += \
     android.hardware.audio.effect@2.0-impl \
     android.hardware.audio@2.0-impl \
     android.hardware.audio@2.0-service \
-    android.hardware.soundtrigger@2.0-impl
-
-PRODUCT_PACKAGES += \
+    android.hardware.soundtrigger@2.0-impl \
     tinymix
 
 PRODUCT_COPY_FILES += \
@@ -190,10 +184,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libgnss \
     libgnsspps \
-
-PRODUCT_PACKAGES += \
     android.hardware.gnss@1.0-impl-qti \
-    android.hardware.gnss@1.0-service-qti \
+    android.hardware.gnss@1.0-service-qti
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/gps/flp.conf:$(TARGET_COPY_OUT_VENDOR)/etc/flp.conf \
